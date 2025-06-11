@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: #34671C;
+    /* Cor igual à da imagem */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Alinha no topo */
+    height: 100vh;
+    padding-top: 150px;
+    /* Espaço do topo */
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+}
