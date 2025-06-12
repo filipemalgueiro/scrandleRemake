@@ -4,12 +4,73 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Verde com Logo</title>
+    <title>SCRANDLE BR</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+    <link rel="icon" href="imgs/VectorLog.png" type="image/png">
+
 </head>
 
+
+
 <body>
-    <img id=logo src="C:\Users\vito\scrandleRemake\imgs\Group 12.png" alt="Logo Centralizada" />
+    <header>
+        <img id="logo" src="./imgs/Group 12.png" alt="Logo no topo" />
+    </header>
+    <div class="botoes-container">
+        <a href="game.html">
+            <button class="button-icon">
+                <span>DAILY</span>
+                <img src="imgs/Vector.png" alt=""></button></a>
+        <a href="game.html">
+            <button class="button-icon">
+                <span>PRACTICE</span>
+                <img src="imgs/Vector2.png" alt=""></button></a>
+        </button></a>
+    </div>
+    <div class="bottom-icons">
+        <a href="https://x.com/FootyScran" target="_blank" rel="noopener noreferrer">
+            <img src="./imgs/x_icon.svg" alt="Ícone Twitter" class="icon" />
+        </a>
+        <img src="./imgs/score_icon.svg" alt="Ícone Score" class="icon" onclick="openScoreModal()" />
+        <img src="./imgs/info_icon.svg" alt="Ícone Info" class="icon" onclick="openInfoModal()" />
+    </div>
+    <div id="scoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeScoreModal()">&times;</span>
+            <h2>GENERAL SCORE</h2>
+            <p><strong>ACCURACY:</strong> 0.0%</p>
+            <p><strong>PERFECT GAMES:</strong> 0/0</p>
+            <p><strong>CURRENT STREAK:</strong> 0 DAYS</p>
+        </div>
+    </div>
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeInfoModal()">&times;</span>
+            <h3>SCRANDLE</h3>
+            <p>The thrilling daily game of food comparison!</p>
+            <p>View exotic and delicious scrans from around the world.</p>
+
+            <hr />
+            <h4>GAME INSTRUCTIONS</h4>
+            <p>Guess which scran is superior, as independently adjudicated by thousands of @FootyScran followers.</p>
+
+            <hr />
+            <h4>UPDATES</h4>
+            <p>(21/04/2025) The 2025 expansion is now here!</p>
+            <p>Over 100 new scrans have been added! (also made the game a bit snappier).</p>
+
+            <hr />
+            <p>Thanks to the small legion of streamers who have been scranning for the last year.</p>
+            <p>See you around, danbo!</p>
+            <p style="font-size: 1.5rem;">😉</p>
+        </div>
+    </div>
+
+
+    <script src="script_landing.js"></script>
 </body>
 
 </html>

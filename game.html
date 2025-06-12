@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrandle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="progress">Rodada 1/10</div>
+        <div class="image-pair">
+            <img id="img1" src="" alt="Imagem 1" class="food-img" onclick="escolherImagem(0)">
+            <img id="img2" src="" alt="Imagem 2" class="food-img" onclick="escolherImagem(1)">
+        </div>
+    </div>
+
+    <div id="end-screen" style="display: none;">
+        <h2>Você terminou!</h2>
+        <p>Obrigado por jogar!</p>
+        <button onclick="reiniciarJogo()">Jogar Novamente</button>
+    </div>
+
+    <script src="script_game.js"></script>
+</body>

@@ -1,17 +1,175 @@
 body {
+    font-family: "Jomhuria", serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
+    padding: 0;
     background-color: #34671C;
-    /* Cor igual à da imagem */
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    /* Alinha no topo */
+    flex-direction: column;
     height: 100vh;
-    padding-top: 150px;
-    /* Espaço do topo */
 }
 
-.logo {
-    max-width: 300px;
+header {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.botoes-container {
+    display: flex;
+    flex-direction: column;
+    /* empilha os botões verticalmente */
+    align-items: center;
+    /* centraliza horizontalmente os botões */
+    gap: 25px;
+    /* espaço vertical entre os botões */
+    margin-top: 120px;
+    /* distância do topo da página */
+}
+
+
+#logo {
+    max-width: 400px;
     height: auto;
+}
+
+.button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #f4a300;
+    color: white;
+    font-family: 'Jomhuria', cursive;
+    font-size: 58px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-icon img {
+    height: 30px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    font-family: 'Jomhuria', cursive;
+    padding: 25px 55px;
+    height: 110px;
+    width: 250px;
+    font-weight: bold;
+    font-size: 75px;
+    background-color: #f8aa1c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-icons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    filter: brightness(1000%);
+    /* Força o branco nos SVGs */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* para espaçamento interno em telas pequenas */
+
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.modal-content {
+    background-color: #E59B10;
+    font-size: 18px;
+    padding: 20px 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 300px;
+    max-height: 80vh;
+    /* altura máxima relativa à tela */
+    overflow-y: auto;
+    /* habilita scroll vertical se necessário */
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* CSS do game.html */
+
+.image-pair {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.food-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+
+.food-img:hover {
+    transform: scale(1.05);
+}
+
+#progress {
+    text-align: center;
+    font-size: 24px;
+    color: white;
 }
