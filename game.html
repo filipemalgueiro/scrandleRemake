@@ -9,18 +9,102 @@
 </head>
 
 <body>
+    <div id="top-bar">
+        <span id="score-label">SCORE:</span>
+        <div id="score-dots">
+            <span class="dot white" data-index="0"></span>
+            <span class="dot white" data-index="1"></span>
+            <span class="dot white" data-index="2"></span>
+            <span class="dot white" data-index="3"></span>
+            <span class="dot white" data-index="4"></span>
+            <span class="dot white" data-index="5"></span>
+            <span class="dot white" data-index="6"></span>
+            <span class="dot white" data-index="7"></span>
+            <span class="dot white" data-index="8"></span>
+            <span class="dot white" data-index="9"></span>
+        </div>
+        <div class="top-icons">
+            <a href="https://x.com/FootyScran" target="_blank" rel="noopener noreferrer">
+                <img src="./imgs/x_icon.svg" alt="Ícone Twitter" class="icon" />
+            </a>
+            <img src="./imgs/score_icon.svg" alt="Ícone Score" class="icon" onclick="openScoreModal()" />
+            <img src="./imgs/info_icon.svg" alt="Ícone Info" class="icon" onclick="openInfoModal()" />
+        </div>
+    </div>
     <div id="game-container">
-        <div id="progress">Rodada 1/10</div>
+
         <div class="image-pair">
-            <img id="img1" src="" alt="Imagem 1" class="food-img" onclick="escolherImagem(0)">
-            <img id="img2" src="" alt="Imagem 2" class="food-img" onclick="escolherImagem(1)">
+            <div class="food-card" onclick="escolherImagem(0)" data-value="91.9">
+                <div class="card-header">
+                    <span class="team-name">Aston Villa</span>
+                    <span class="country-code">ENG <img src="imgs/eng.png" class="flag" alt="ENG flag"></span>
+                </div>
+                <img src="imgs\FxOCY1zWcAgitH0.jpg" alt="Comida 1" class="food-img">
+                <div class="card-footer">
+                    <span class="food-name">Argentinian BBQ £10</span>
+                </div>
+            </div>
+
+            <div class="food-card" onclick="escolherImagem(1)" data-value="94.2">
+                <div class="card-header">
+                    <span class="team-name">Birmingham City</span>
+                    <span class="country-code">ENG <img src="imgs/eng.png" class="flag" alt="ENG flag"></span>
+                </div>
+                <img src="imgs\GoVn6xfXcAAa4kC.png" alt="Comida 2" class="food-img">
+                <div class="card-footer">
+                    <span class="food-name">Steak and chips £10</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="end-screen" style="display: none;">
-        <h2>Você terminou!</h2>
-        <p>Obrigado por jogar!</p>
-        <button onclick="reiniciarJogo()">Jogar Novamente</button>
+
+    <div id="scoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeScoreModal()">&times;</span>
+            <h2>GENERAL SCORE</h2>
+            <p><strong>ACCURACY:</strong> <span id="accuracy">0.0%</span></p>
+            <p><strong>PERFECT GAMES:</strong> <span id="perfect-games">0</span>/<span id="total-games">0</span></p>
+            <p><strong>CURRENT STREAK:</strong> <span id="streak">0</span> DAYS</p>
+        </div>
+    </div>
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeInfoModal()">&times;</span>
+            <h3>SCRANDLE</h3>
+            <p>The thrilling daily game of food comparison!</p>
+            <p>View exotic and delicious scrans from around the world.</p>
+
+            <hr />
+            <h4>GAME INSTRUCTIONS</h4>
+            <p>Guess which scran is superior, as independently adjudicated by thousands of @FootyScran followers.</p>
+
+            <hr />
+            <h4>UPDATES</h4>
+            <p>(21/04/2025) The 2025 expansion is now here!</p>
+            <p>Over 100 new scrans have been added! (also made the game a bit snappier).</p>
+
+            <hr />
+            <p>Thanks to the small legion of streamers who have been scranning for the last year.</p>
+            <p>See you around, danbo!</p>
+            <p style="font-size: 1.5rem;">😉</p>
+        </div>
+    </div>
+
+    <div id="endModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharEndModal()">&times;</span>
+            <h2>You've Finished</h2>
+            <hr />
+            <p><strong>SCORE:</strong> <span id="final-dots"></span> <span id="final-score"></span></p>
+            <hr />
+            <h3>General Score</h3>
+            <p><strong>Accuracy:</strong> <span id="final-accuracy">0%</span></p>
+            <p><strong>Perfect Games:</strong> <span id="final-perfect">0</span>/<span id="final-total">0</span></p>
+            <p><strong>Current Streak:</strong> <span id="final-streak">0</span></p>
+            <hr />
+            <p>See you tomorrow!</p>
+        </div>
     </div>
 
     <script src="script_game.js"></script>
